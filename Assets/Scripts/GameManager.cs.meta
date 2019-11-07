@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 51fff6e554bac4d4eab7a91be2229d9f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GameCamera: {instanceID: 0}
+  - RoomPrefab: {fileID: 2956198220000751070, guid: 62e4168ef1ad5ad4da7dae41bfac55e9,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
