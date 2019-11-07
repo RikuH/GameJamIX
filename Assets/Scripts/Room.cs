@@ -11,8 +11,6 @@ public class Room : MonoBehaviour
 
     public bool ExitUnlocked;
     public Door Door;
-  
-    private bool DoorMoving = false;
 
     private void Start()
     {
@@ -22,8 +20,7 @@ public class Room : MonoBehaviour
 
     public void ToggleExit()
     {
-        Debug.Log("ToggleExit");
-        DoorMoving = true;
+        Door.ToggleDoor();
 
         if (!ExitUnlocked)
         {
