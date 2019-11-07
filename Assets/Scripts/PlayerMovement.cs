@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float TurnSpeed;
 
-    public int health;
+    public int health = 3;
 
     bool iceGround = true;
     Rigidbody rb;
@@ -21,11 +21,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(iceGround){
-            GetComponent<Collider>().material.dynamicFriction = 0;
-            
+        if(health <= 0){
+            //GG
+            Time.timeScale = 0;
         }
-
         Move();
         LookAtCamera();
     }
@@ -76,6 +75,16 @@ public class PlayerMovement : MonoBehaviour
         	// Smoothly rotate towards the target point.
         	transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, TurnSpeed * Time.deltaTime);
 		}
+    }
+
+    void OnCollisionEnter(Collision col){
+        if(col.transform.tag == "Enemy"){
+            health--;
+            Debug.Log(health);
+
+            this.transform.position -= Vector3.forward * Time.deltaTime * moveSpeed * 10;
+
+        }
     }
 
 }
