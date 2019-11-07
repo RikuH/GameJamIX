@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    //This is a empthy gameobject, that is rooms child.
+    public bool ExitUnlocked;
+
+    //These are empthy gameobjects, that are rooms children.
     public GameObject RoomCameraPosition;
+    public GameObject RoomPlayerSpawn;
+    public GameObject RoomExitPosition;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-           
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ExitUnlocked = false;
     }
 }

@@ -6,23 +6,47 @@ public class GameManager : MonoBehaviour
 {
     public Camera GameCamera;
     public PlayerMovement player;
-
     public Room currentRoom;
-    public List<Room> RoomList;
 
-    
+    //List of all rooms in scene
+    public List<Room> RoomList;
+    //Lisr index of current room
+    public int RoomIndex;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        currentRoom = RoomList[0];
-        UpdateCameraPosition(currentRoom);
+        RoomIndex = 0;
+        currentRoom = RoomList[RoomIndex];
+        ChangeRoom(currentRoom);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        //if (currentRoom.ExitUnlocked)
+            GoToNextRoom();
+    }
+
+    public void GoToNextRoom()
+    {
+        if (RoomIndex < RoomList.Count - 1)
+            RoomIndex++;
+
+        else
+            RoomIndex = 0;
+
+        ChangeRoom(RoomList[RoomIndex]);
+    }
+
+    public void ChangeRoom(Room room)
+    {
+        currentRoom = room;
+        UpdateCameraPosition(room);
+        player.transform.position = room.RoomPlayerSpawn.transform.position;
+
+        //Move the gamemanager object to exit location
+        this.transform.position = room.RoomExitPosition.transform.position;
     }
 
     private void UpdateCameraPosition(Room room)
