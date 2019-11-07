@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
     //Lisr index of current room
     public int RoomIndex;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         RoomIndex = 0;
@@ -24,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (currentRoom.ExitUnlocked)
+        if (currentRoom.ExitUnlocked && other.tag == "Player")
             GoToNextRoom();
     }
 
