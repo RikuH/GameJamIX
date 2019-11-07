@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - rndPos
+  - interact
   layers:
   - Default
   - TransparentFX

@@ -20,25 +20,24 @@ public class SkatingEnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void RandomizeNextPosition()
     {
         int random = Random.Range(0, rndPoints.Length);
-        Debug.Log("Old Random: " + random + " new Random: " + newRandom);
+        //Debug.Log("Old Random: " + random + " new Random: " + newRandom);
 
         if (random != newRandom)
         {
-            Debug.Log("Next position 1");
+            //Debug.Log("Next position 1");
             newRandom = random;
-            //Debug.Log(rndPoints[random].transform.position);
             agent.SetDestination(rndPoints[newRandom].transform.position);
-            Debug.Log("Next position 2");
+            //Debug.Log("Next position 2");
         }
         else
         {
-            Debug.Log("Same Random");
+            //Debug.Log("Same Random");
             RandomizeNextPosition();
         }
     }
@@ -47,7 +46,7 @@ public class SkatingEnemyScript : MonoBehaviour
     {
         if (other.tag != "Untagged")
         {
-            Debug.Log(other.tag);
+            //Debug.Log(other.tag);
 
             if (other.tag == "rndPos")
             {
