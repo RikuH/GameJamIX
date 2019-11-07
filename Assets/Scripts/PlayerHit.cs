@@ -22,7 +22,7 @@ public class PlayerHit : MonoBehaviour
                 Debug.Log("VIUH " + isHitting);
                 isHitting = true;
                 //GameObject.Find("Sword").GetComponent<Animator>().SetBool("CanHit", true);
-                GameObject.Find("Sword").GetComponent<Animator>().SetTrigger("swordHit");
+                //GameObject.Find("Sword").GetComponent<Animator>().SetTrigger("swordHit");
                 StartCoroutine(hitDelay());
             }
 

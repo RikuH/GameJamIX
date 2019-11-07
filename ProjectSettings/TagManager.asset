@@ -6,6 +6,7 @@ TagManager:
   tags:
   - rndPos
   - interact
+  - IceFloor
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class vipuScript : MonoBehaviour
 {
+    public Room Room;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class vipuScript : MonoBehaviour
         if(other.tag == "Player"){
             if(GameObject.Find("Lonk").GetComponent<PlayerHit>().isHitting){
                 Debug.Log("vipu");
+                Room.ToggleExit();
                 this.transform.rotation = new Quaternion(-40,0,0,0);
             }
         }

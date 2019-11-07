@@ -9,15 +9,23 @@ public class PlayerMovement : MonoBehaviour
 
     public int health;
 
+    bool iceGround = true;
+    Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(iceGround){
+            GetComponent<Collider>().material.dynamicFriction = 0;
+            
+        }
+
         Move();
         LookAtCamera();
     }
@@ -69,4 +77,5 @@ public class PlayerMovement : MonoBehaviour
         	transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, TurnSpeed * Time.deltaTime);
 		}
     }
+
 }
