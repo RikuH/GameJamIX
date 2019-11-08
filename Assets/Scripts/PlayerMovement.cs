@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionStay(Collision col)
     {
-        Debug.Log(col.transform.tag);
+        //Debug.Log(col.transform.tag);
         if (col.transform.tag == "rightConvoyer")
         {
             if (canTakeDamage)
