@@ -20,16 +20,19 @@ public class Room : MonoBehaviour
 
     public void ToggleExit()
     {
-
-        if (!ExitUnlocked)
+        if (!Door.DoorOpening)
         {
-            ExitUnlocked = true;
-        }
+            if (!ExitUnlocked)
+            {
+                ExitUnlocked = true;
+            }
 
-        else
-        {
-            ExitUnlocked = false;
+            else
+            {
+                ExitUnlocked = false;
+            }
+
+            Door.ToggleDoor();
         }
-        Door.ToggleDoor();
     }
 }
