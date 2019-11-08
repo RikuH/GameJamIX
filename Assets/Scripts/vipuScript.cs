@@ -22,7 +22,7 @@ public class vipuScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (GameObject.Find("Lonk").GetComponent<PlayerHit>().isHitting)
+            if (GameObject.Find("RealLonk").GetComponent<PlayerHit>().isHitting)
             {
                 Room.ToggleExit();
                 this.transform.rotation = new Quaternion(-40, 0, 0, 0);
