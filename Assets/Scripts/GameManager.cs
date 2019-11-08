@@ -51,6 +51,10 @@ public class GameManager : MonoBehaviour
         if (currentRoom.tag == "Dark")
             WorldLight.intensity = 0.05f;
 
+        if(currentRoom.tag == "Ice"){
+            WorldLight.color = new Color(0.7f,1,1);
+        }
+
         else
             WorldLight.intensity = 1.0f;
     }
