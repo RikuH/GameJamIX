@@ -20,6 +20,7 @@ public class Room : MonoBehaviour
 
     public void ToggleExit()
     {
+
         if (!ExitUnlocked)
         {
             ExitUnlocked = true;
