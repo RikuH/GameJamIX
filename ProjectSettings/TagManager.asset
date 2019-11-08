@@ -16,6 +16,7 @@ TagManager:
   - SpikesTop
   - Dark
   - Ice
+  - Boss
   layers:
   - Default
   - TransparentFX

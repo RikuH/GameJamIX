@@ -16,10 +16,15 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] AnimController animations;
 
+    public Collider hitCollider;
+    public Boss Boss;
+    public bool bootLegHitReg;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        hitCollider.isTrigger = true;
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
             Move();
             LookAtCamera();
+            checkHit();
         }
 
 
@@ -71,6 +77,30 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+    void checkHit()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            bootLegHitReg = true;
+        }
+        if(Input.GetMouseButtonUp(0))
+        {
+            bootLegHitReg = false;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (bootLegHitReg)
+        {
+            if (other.transform.tag == "Boss")
+            {
+                Boss.takeHit();
+            }
+        }
+    }
+
 
     void LookAtCamera()
     {

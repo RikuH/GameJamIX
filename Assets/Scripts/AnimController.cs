@@ -21,7 +21,7 @@ public class AnimController : MonoBehaviour
     public void idleAnimation()
     {
         condition = 0;
-        Debug.Log("Pysähtyy");
+        //Debug.Log("Pysähtyy");
         animator.SetInteger("condition", condition);
     }
     public void walkAnimation()

@@ -20,7 +20,7 @@ public class PlayerHit : MonoBehaviour
         {
             if (!isHitting)
             {
-                Debug.Log("VIUH " + isHitting);
+                //Debug.Log("VIUH " + isHitting);
                 isHitting = true;
                 animations.swingAnimation();
                 //GameObject.Find("Sword").GetComponent<Animator>().SetBool("CanHit", true);
