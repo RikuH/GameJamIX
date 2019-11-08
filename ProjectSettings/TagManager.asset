@@ -14,6 +14,7 @@ TagManager:
   - SpikesLeft
   - SpikesRight
   - SpikesTop
+  - Dark
   layers:
   - Default
   - TransparentFX
