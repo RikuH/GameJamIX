@@ -1999,13 +1999,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.4424199
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: -6057140222963153312, guid: ba84abff217925943a4e69bb55947ef4,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e2fab04064811e940b962f680e9dbcb1, type: 2}
-=======
     - target: {fileID: -4216859302048453862, guid: ba84abff217925943a4e69bb55947ef4,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -2014,7 +2007,6 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba84abff217925943a4e69bb55947ef4, type: 3}
 --- !u!4 &7151730363647503345 stripped
->>>>>>> parent of deeb1a7... asdasdasdaaa
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: ba84abff217925943a4e69bb55947ef4,
     type: 3}
