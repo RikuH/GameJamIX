@@ -8,6 +8,12 @@ TagManager:
   - interact
   - IceFloor
   - Enemy
+  - rightConvoyer
+  - leftConvoy
+  - Spikes
+  - SpikesLeft
+  - SpikesRight
+  - SpikesTop
   layers:
   - Default
   - TransparentFX
