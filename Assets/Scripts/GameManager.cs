@@ -48,15 +48,21 @@ public class GameManager : MonoBehaviour
         this.transform.position = room.RoomExitPosition.transform.position;
 
         // If the room has dark tag dimm the lights
-        if (currentRoom.tag == "Dark")
+        if (currentRoom.tag == "Dark"){
+            Debug.Log("Pimee");
             WorldLight.intensity = 0.05f;
-
-        if(currentRoom.tag == "Ice"){
-            WorldLight.color = new Color(0.7f,1,1);
         }
 
-        else
+        if (currentRoom.tag == "Ice")
+        {
             WorldLight.intensity = 1.0f;
+            WorldLight.color = new Color(0.7f, 1, 1);
+        }
+        else
+        {
+            WorldLight.color = new Color(1, 0.95f, 0.75f);
+            WorldLight.intensity = 1.0f;
+        }
     }
 
     private void UpdateCameraPosition(Room room)
@@ -65,5 +71,5 @@ public class GameManager : MonoBehaviour
         GameCamera.transform.rotation = room.RoomCameraPosition.transform.rotation;
     }
 
-    
+
 }
