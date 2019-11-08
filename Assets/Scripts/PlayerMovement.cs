@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool canTakeDamage = true;
 
+    [SerializeField] AnimController animations;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             this.transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
+            animations.walkAnimation();
         }
         if (Input.GetKey(KeyCode.S))
         {
