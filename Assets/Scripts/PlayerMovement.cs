@@ -25,10 +25,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (health <= 0)
+        if (health <= 0 || Input.GetKeyDown(KeyCode.K))
         {
             //GG
-            Time.timeScale = 0;
+            animations.deadAnimation();
+            //Time.timeScale = 0;
         }
         Move();
         LookAtCamera();
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
+
         if (Input.GetKey(KeyCode.W))
         {
             this.transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
@@ -46,15 +48,24 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             this.transform.position -= Vector3.forward * Time.deltaTime * moveSpeed;
+            animations.walkAnimation();
         }
         if (Input.GetKey(KeyCode.A))
         {
             this.transform.position += Vector3.left * Time.deltaTime * moveSpeed;
+            animations.walkAnimation();
         }
         if (Input.GetKey(KeyCode.D))
         {
             this.transform.position -= Vector3.left * Time.deltaTime * moveSpeed;
+            animations.walkAnimation();
         }
+
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+        {
+            animations.idleAnimation();
+        }
+
     }
 
     void LookAtCamera()

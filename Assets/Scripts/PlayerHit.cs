@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHit : MonoBehaviour
 {
     public bool isHitting = false;
+    [SerializeField] AnimController animations;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class PlayerHit : MonoBehaviour
             {
                 Debug.Log("VIUH " + isHitting);
                 isHitting = true;
+                animations.swingAnimation();
                 //GameObject.Find("Sword").GetComponent<Animator>().SetBool("CanHit", true);
                 //GameObject.Find("Sword").GetComponent<Animator>().SetTrigger("swordHit");
                 StartCoroutine(hitDelay());
@@ -33,7 +35,7 @@ public class PlayerHit : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         isHitting = false;
-        Debug.Log(isHitting);
+        animations.idleAnimation();
     }
 
     void OnTriggerStay(Collider other)
