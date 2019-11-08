@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public Camera GameCamera;
     public PlayerMovement player;
     public Room currentRoom;
+    public Light WorldLight;
 
     //List of all rooms in scene
     public List<Room> RoomList;
@@ -45,6 +46,17 @@ public class GameManager : MonoBehaviour
 
         //Move the gamemanager object to exit location
         this.transform.position = room.RoomExitPosition.transform.position;
+
+        // If the room has dark tag dimm the lights
+        if (currentRoom.tag == "Dark")
+            WorldLight.intensity = 0.05f;
+
+        if(currentRoom.tag == "Ice"){
+            WorldLight.color = new Color(0.7f,1,1);
+        }
+
+        else
+            WorldLight.intensity = 1.0f;
     }
 
     private void UpdateCameraPosition(Room room)

@@ -136,6 +136,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.43874973, y: 0.8839793, z: 3.106117}
   m_Center: {x: 0.109132424, y: 0.0007342068, z: -0.011425456}
+--- !u!65 &577368801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686768427819302609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43874973, y: 0.8839793, z: 3.106117}
+  m_Center: {x: 0.109132424, y: 0.0007342068, z: -0.011425456}
 --- !u!65 &578913505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -156,6 +169,19 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3686768428781906871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43874973, y: 0.8839793, z: 3.106117}
+  m_Center: {x: 0.109132424, y: 0.0007342068, z: -0.011425456}
+--- !u!65 &1844896714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3686768429138065724}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -470,19 +496,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &1844896714
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3686768429138065724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.43874973, y: 0.8839793, z: 3.106117}
-  m_Center: {x: 0.109132424, y: 0.0007342068, z: -0.011425456}
 --- !u!1 &4615034358830156408
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,19 +682,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &577368801
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3686768427819302609}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.43874973, y: 0.8839793, z: 3.106117}
-  m_Center: {x: 0.109132424, y: 0.0007342068, z: -0.011425456}
 --- !u!1 &4615034359442746625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,13 +2513,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 301ef317164aab3459c8c900af362562,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.0596209
+      propertyPath: m_LocalScale.y
+      value: 1.76929
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 301ef317164aab3459c8c900af362562,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.76929
+      propertyPath: m_LocalScale.z
+      value: 2.0596209
       objectReference: {fileID: 0}
     - target: {fileID: -3058515666060837491, guid: 301ef317164aab3459c8c900af362562,
         type: 3}
@@ -2914,13 +2914,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 301ef317164aab3459c8c900af362562,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.0596213
+      propertyPath: m_LocalScale.y
+      value: 1.76929
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 301ef317164aab3459c8c900af362562,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.76929
+      propertyPath: m_LocalScale.z
+      value: 2.0596213
       objectReference: {fileID: 0}
     - target: {fileID: -3058515666060837491, guid: 301ef317164aab3459c8c900af362562,
         type: 3}
@@ -4039,6 +4039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.24723111
+      objectReference: {fileID: 0}
+    - target: {fileID: 1351443305032793735, guid: c134462c869b5d046b407805f6c91dff,
+        type: 3}
+      propertyPath: toggleDelay
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1351443305032793735, guid: c134462c869b5d046b407805f6c91dff,
         type: 3}
