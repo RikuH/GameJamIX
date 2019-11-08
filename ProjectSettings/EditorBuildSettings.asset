@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TaritanScene.unity
+    guid: 110d7f20d0f94a44bb53cad869fd668d
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 13e614ba8a7b8704fbeab717c75f6b30
   m_configObjects: {}
