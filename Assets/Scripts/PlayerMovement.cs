@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     bool iceGround = true;
     Rigidbody rb;
 
+    bool canTakeDamage = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,14 +82,49 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public IEnumerator PlayerTakeDamage()
+    {
+        health--;
+        canTakeDamage = false;
+        Debug.Log(health);
+
+        yield return new WaitForSeconds(1);
+        canTakeDamage = true;
+    }
+
     void OnCollisionEnter(Collision col)
     {
         if (col.transform.tag == "Enemy")
         {
-            health--;
-            Debug.Log(health);
-
-            this.transform.position -= Vector3.forward * Time.deltaTime * moveSpeed * 10;
+            if (canTakeDamage)
+            {
+                this.transform.position -= Vector3.forward * Time.deltaTime * moveSpeed * 20;
+                StartCoroutine(PlayerTakeDamage());
+            }
+        }
+        if (col.transform.tag == "SpikesLeft")
+        {
+            if (canTakeDamage)
+            {
+                this.transform.position -= Vector3.left * Time.deltaTime * moveSpeed * 20;
+                StartCoroutine(PlayerTakeDamage());
+            }
+        }
+        if (col.transform.tag == "SpikesRight")
+        {
+            if (canTakeDamage)
+            {
+                this.transform.position += Vector3.left * Time.deltaTime * moveSpeed * 20;
+                StartCoroutine(PlayerTakeDamage());
+            }
+        }
+        if (col.transform.tag == "SpikesTop")
+        {
+            if (canTakeDamage)
+            {
+                this.transform.position -= Vector3.forward * Time.deltaTime * moveSpeed * 20;
+                StartCoroutine(PlayerTakeDamage());
+            }
         }
     }
 
@@ -96,14 +133,20 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(col.transform.tag);
         if (col.transform.tag == "rightConvoyer")
         {
-            Debug.Log("Right");
-            this.transform.position -= Vector3.left * Time.deltaTime * moveSpeed * 2;
+            if (canTakeDamage)
+            {
+                Debug.Log("Right");
+                this.transform.position -= Vector3.left * Time.deltaTime * moveSpeed * 2;
+            }
 
         }
         if (col.transform.tag == "leftConvoy")
         {
-            Debug.Log("Left");
-            this.transform.position += Vector3.left * Time.deltaTime * moveSpeed * 2;
+            if (canTakeDamage)
+            {
+                Debug.Log("Left");
+                this.transform.position += Vector3.left * Time.deltaTime * moveSpeed * 2;
+            }
         }
     }
 

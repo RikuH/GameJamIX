@@ -10,6 +10,10 @@ TagManager:
   - Enemy
   - rightConvoyer
   - leftConvoy
+  - Spikes
+  - SpikesLeft
+  - SpikesRight
+  - SpikesTop
   layers:
   - Default
   - TransparentFX
