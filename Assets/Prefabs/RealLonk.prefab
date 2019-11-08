@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 89381225377873108}
   - component: {fileID: 89381225377873106}
   m_Layer: 0
-  m_Name: Lonk 1
+  m_Name: RealLonk
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,13 +749,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5589561055045667645}
-  m_LocalRotation: {x: 0.028568046, y: -0, z: -0.0000000023283062, w: 0.9995919}
-  m_LocalPosition: {x: -0, y: 0.846, z: -0.348}
+  m_LocalRotation: {x: 0.31171873, y: 0.00000005960463, z: -0.000000044703473, w: 0.95017445}
+  m_LocalPosition: {x: -0, y: 0.974, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 89381225377873111}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 3.2740002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 36.326, y: 0, z: 0}
 --- !u!108 &5589561055045667587
 Light:
   m_ObjectHideFlags: 0
@@ -767,9 +767,9 @@ Light:
   serializedVersion: 9
   m_Type: 0
   m_Color: {r: 0.495283, g: 1, b: 0.9551792, a: 1}
-  m_Intensity: 54.17
-  m_Range: 3.15
-  m_SpotAngle: 55.2
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 101.8
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
