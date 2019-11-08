@@ -8,6 +8,8 @@ TagManager:
   - interact
   - IceFloor
   - Enemy
+  - rightConvoyer
+  - leftConvoy
   layers:
   - Default
   - TransparentFX
