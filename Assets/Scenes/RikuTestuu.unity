@@ -668,7 +668,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RoomList.Array.data[0]
       value: 
-      objectReference: {fileID: 1903738061}
+      objectReference: {fileID: 507725480}
     - target: {fileID: 7068505798798327524, guid: ae3b7f2ea13bd00439015e5442d40073,
         type: 3}
       propertyPath: RoomList.Array.data[1]
@@ -1368,18 +1368,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1903738061 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7800803118702733656, guid: 85428a0627ce96646966ee83ee043099,
-    type: 3}
-  m_PrefabInstance: {fileID: 2754716505621822835}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 926af68566e14274dacdbf5f3d11ec7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2128122375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,6 +1523,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1182177606}
+    - target: {fileID: 4991258895627100300, guid: 85428a0627ce96646966ee83ee043099,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3806cd0b0ee168e4c86fef06a94f61f0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85428a0627ce96646966ee83ee043099, type: 3}
 --- !u!1001 &4615034359126813181
