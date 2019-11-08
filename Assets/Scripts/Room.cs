@@ -20,7 +20,6 @@ public class Room : MonoBehaviour
 
     public void ToggleExit()
     {
-        Door.ToggleDoor();
 
         if (!ExitUnlocked)
         {
@@ -31,5 +30,6 @@ public class Room : MonoBehaviour
         {
             ExitUnlocked = false;
         }
+        Door.ToggleDoor();
     }
 }

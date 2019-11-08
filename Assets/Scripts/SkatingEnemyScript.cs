@@ -9,6 +9,8 @@ public class SkatingEnemyScript : MonoBehaviour
     public GameObject[] rndPoints;
     int newRandom;
 
+    [SerializeField] private GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class SkatingEnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        this.transform.LookAt(player.transform);
     }
 
     void RandomizeNextPosition()
