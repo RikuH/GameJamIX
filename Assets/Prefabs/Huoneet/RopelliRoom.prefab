@@ -1086,11 +1086,6 @@ PrefabInstance:
       propertyPath: turnSpeed
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2136942919787827931, guid: 2c3a77f77c67fc8499314600eaac7ae3,
-        type: 3}
-      propertyPath: flip
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2136942919525563153, guid: 2c3a77f77c67fc8499314600eaac7ae3,
         type: 3}
       propertyPath: m_TagString
@@ -1134,7 +1129,7 @@ PrefabInstance:
     - target: {fileID: 2136942919787827879, guid: 2c3a77f77c67fc8499314600eaac7ae3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 2136942919787827879, guid: 2c3a77f77c67fc8499314600eaac7ae3,
         type: 3}
@@ -1144,7 +1139,7 @@ PrefabInstance:
     - target: {fileID: 2136942919787827879, guid: 2c3a77f77c67fc8499314600eaac7ae3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2136942919787827879, guid: 2c3a77f77c67fc8499314600eaac7ae3,
         type: 3}
