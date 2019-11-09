@@ -136,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator PlayerTakeDamage()
     {
+        soundOfMusic.takeHitSound();
         health--;
         canTakeDamage = false;
         Debug.Log(health);

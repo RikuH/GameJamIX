@@ -17,6 +17,7 @@ public class audioController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartSound.volume = 0.1f;
         StartSound.Play();
         GameMusic = GetComponent<AudioSource>();
     }
@@ -41,7 +42,7 @@ public class audioController : MonoBehaviour
     {
         if (play)
         {
-            FactorySound.volume = 1;
+            FactorySound.volume = .6f;
             //AudioSource.PlayClipAtPoint(FactorySound.clip, this.transform.position);
         }
         else{
