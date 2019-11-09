@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (other.transform.tag == "Boss")
             {
+                
                 Boss.takeHit();
             }
         }
