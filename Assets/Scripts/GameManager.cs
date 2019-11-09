@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Boss_movement Bosautus;
     public GameOverHUD menut;
 
+    public GameObject slaideri;
+
     void Start()
     {
         RoomIndex = 0;
@@ -88,11 +90,13 @@ public class GameManager : MonoBehaviour
         }
         if (currentRoom.tag == "VictoryRoom")
         {
+            slaideri.SetActive(false);
             menut.voitto();
             player.soundOfMusic.doTadaa();
         }
         if (currentRoom.tag == "BossRoom")
         {
+            slaideri.SetActive(true);
             player.soundOfMusic.confused(false);
             player.soundOfMusic.Bosautus();
             Bosautus.isActive = true;

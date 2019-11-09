@@ -6,6 +6,8 @@ public class vipuScript : MonoBehaviour
 {
     [SerializeField] int toggleDelay;
     public Room Room;
+
+    public audioController aani;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class vipuScript : MonoBehaviour
         {
             if (GameObject.Find("RealLonk").GetComponent<PlayerHit>().isHitting)
             {
+                aani.pullLever();
                 Room.ToggleExit();
                 this.transform.rotation = new Quaternion(-40, 0, 0, 0);
 

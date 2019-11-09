@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class audioController : MonoBehaviour
 {
+    public Boss bossi;
+
     public AudioSource StartSound;
     public AudioSource EndSound;
     public AudioSource takeHit;
@@ -11,6 +13,7 @@ public class audioController : MonoBehaviour
     public AudioSource GameMusic;
     public AudioSource tadaa;
     public AudioSource BossBreath;
+    public AudioSource lever;
 
     bool doOnce = true;
     int hp = 3;
@@ -74,11 +77,16 @@ public class audioController : MonoBehaviour
 
     public void Bosautus()
     {
-        if(!BossBreath.isPlaying)
+
+        if (!BossBreath.isPlaying)
             BossBreath.Play();
 
-            else
+        else
             BossBreath.Stop();
         //AudioSource.PlayClipAtPoint(BossBreath.clip, this.transform.position);
+    }
+    public void pullLever()
+    {
+        lever.Play();
     }
 }

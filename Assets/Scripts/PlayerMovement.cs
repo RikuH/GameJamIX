@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public Boss Boss;
     public bool bootLegHitReg;
 
+    bool canDoDamage = true;
+
     public audioController soundOfMusic;
 
     // Start is called before the first frame update
@@ -99,12 +101,20 @@ public class PlayerMovement : MonoBehaviour
         {
             if (other.transform.tag == "Boss")
             {
-
-                Boss.takeHit();
+                if (canDoDamage)
+                {
+                    canDoDamage = false;
+                    Boss.takeHit();
+                    StartCoroutine(dealy());
+                }
             }
         }
     }
-
+    IEnumerator dealy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        canDoDamage = true;
+    }
 
     void LookAtCamera()
     {

@@ -12,8 +12,6 @@ public class Boss_movement : MonoBehaviour
 
     public bool isActive = false;
 
-    public audioController bossSounds;
-
 
     void Awake()
     {
@@ -34,13 +32,18 @@ public class Boss_movement : MonoBehaviour
                     nav.SetDestination(player.position);
             }
             else
-            {   
-                bossSounds.Bosautus();
+            {
                 particle.SetActive(true);
                 particle.transform.position = this.transform.position;
                 nav.enabled = false;
-                Destroy(this.gameObject);
+                StartCoroutine(delay());
             }
         }
+    }
+
+    IEnumerator delay()
+    {
+        yield return new WaitForSeconds(1f);
+        Destroy(this.gameObject);
     }
 }
