@@ -48,19 +48,37 @@ public class GameManager : MonoBehaviour
         this.transform.position = room.RoomExitPosition.transform.position;
 
         // If the room has dark tag dimm the lights
-        if (currentRoom.tag == "Dark"){
+        if (currentRoom.tag == "Dark")
+        {
             Debug.Log("Pimee");
             WorldLight.intensity = 0.05f;
         }
 
-        if (currentRoom.tag == "Ice")
+        else if (currentRoom.tag == "Ice")
         {
+            Debug.Log("Jaata");
+            GameObject.Find("LuistelevaKusipaa").GetComponent<SkatingEnemyScript>().isActive = true;
             WorldLight.intensity = 1.0f;
             WorldLight.color = new Color(0.7f, 1, 1);
         }
+        else if (currentRoom.tag == "Convoyer")
+        {
+            Debug.Log("Convoyer");
+            WorldLight.color = new Color(1, 1, 1);
+            player.soundOfMusic.FactorySounds(true);
+        }
+        else if (currentRoom.tag == "Inverted")
+        {
+            Debug.Log("Inverted");
+            WorldLight.intensity = 1.0f;
+            player.soundOfMusic.confused();
+        }
         else
         {
-            WorldLight.color = new Color(1, 0.95f, 0.75f);
+
+            player.soundOfMusic.FactorySounds(false);
+            GameObject.Find("LuistelevaKusipaa").GetComponent<SkatingEnemyScript>().isActive = false;
+            WorldLight.color = new Color(1, 1, 1);
             WorldLight.intensity = 1.0f;
         }
     }

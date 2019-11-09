@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public Boss Boss;
     public bool bootLegHitReg;
 
+    public audioController soundOfMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (health <= 0 || Input.GetKeyDown(KeyCode.K))
         {
-            //GG
+            //GGwww
+            soundOfMusic.playDeathSound();
             animations.deadAnimation();
             //Time.timeScale = 0;
         }
@@ -84,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         {
             bootLegHitReg = true;
         }
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             bootLegHitReg = false;
         }
@@ -96,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (other.transform.tag == "Boss")
             {
+
                 Boss.takeHit();
             }
         }

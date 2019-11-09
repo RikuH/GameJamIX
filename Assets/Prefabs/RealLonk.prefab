@@ -148,6 +148,10 @@ MonoBehaviour:
   TurnSpeed: 100
   health: 3
   animations: {fileID: 5589561056281003355}
+  hitCollider: {fileID: 0}
+  Boss: {fileID: 0}
+  bootLegHitReg: 0
+  soundOfMusic: {fileID: 0}
 --- !u!54 &89381225377873106
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ TagManager:
   - Dark
   - Ice
   - Boss
+  - Convoyer
+  - Inverted
   layers:
   - Default
   - TransparentFX

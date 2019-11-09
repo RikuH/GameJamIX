@@ -10,14 +10,20 @@ public class GameOverHUD : MonoBehaviour
     public Button BackToMenuButton;
 
     public GameObject GameOverPanel;
-    void GameOver()
+    public GameObject VictoryPanel;
+    void Update()
     {   
-        GameOverPanel.SetActive(true);
+        
+        if(GameObject.Find("RealLonk").GetComponent<PlayerMovement>().health <= 0){
+            GameOverPanel.SetActive(true);
+        }
+
+        //Jos room on victoryRoom
+        //VIctoryPanel.SetActive(true);
     }
 
     void BackToMenu()
     {
-        
         SceneManager.LoadScene("TaritanScene");
     }
     void Start()
@@ -29,6 +35,7 @@ public class GameOverHUD : MonoBehaviour
     void StartGame()
     {
         GameOverPanel.SetActive(false);
+        VictoryPanel.SetActive(false);
         SceneManager.LoadScene("GameScene");
     }
 
