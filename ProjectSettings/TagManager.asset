@@ -19,6 +19,9 @@ TagManager:
   - Boss
   - Convoyer
   - Inverted
+  - DarkInverted
+  - BossRoom
+  - VictoryRoom
   layers:
   - Default
   - TransparentFX

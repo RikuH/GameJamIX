@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     //Lisr index of current room
     public int RoomIndex;
 
+    public Boss_movement Bosautus;
+    public GameOverHUD menut;
+
     void Start()
     {
         RoomIndex = 0;
@@ -51,31 +54,54 @@ public class GameManager : MonoBehaviour
         if (currentRoom.tag == "Dark")
         {
             Debug.Log("Pimee");
+            player.soundOfMusic.confused(false);
             WorldLight.intensity = 0.05f;
         }
 
-        else if (currentRoom.tag == "Ice")
+        if (currentRoom.tag == "DarkInverted")
+        {
+            WorldLight.intensity = 0.05f;
+            player.soundOfMusic.confused(true);
+
+        }
+
+        if (currentRoom.tag == "Ice")
         {
             Debug.Log("Jaata");
+            player.soundOfMusic.confused(false);
             GameObject.Find("LuistelevaKusipaa").GetComponent<SkatingEnemyScript>().isActive = true;
             WorldLight.intensity = 1.0f;
             WorldLight.color = new Color(0.7f, 1, 1);
         }
-        else if (currentRoom.tag == "Convoyer")
+        if (currentRoom.tag == "Convoyer")
         {
             Debug.Log("Convoyer");
+            player.soundOfMusic.confused(false);
             WorldLight.color = new Color(1, 1, 1);
             player.soundOfMusic.FactorySounds(true);
         }
-        else if (currentRoom.tag == "Inverted")
+        if (currentRoom.tag == "Inverted")
         {
             Debug.Log("Inverted");
             WorldLight.intensity = 1.0f;
-            player.soundOfMusic.confused();
+            player.soundOfMusic.confused(true);
         }
-        else
+        if (currentRoom.tag == "VictoryRoom")
         {
-
+            menut.voitto();
+            player.soundOfMusic.doTadaa();
+        }
+        if (currentRoom.tag == "BossRoom")
+        {
+            player.soundOfMusic.confused(false);
+            player.soundOfMusic.Bosautus();
+            Bosautus.isActive = true;
+            WorldLight.color = new Color(0.8F, 1, 0.8F);
+            WorldLight.intensity = 1.0f;
+        }
+        if (currentRoom.tag == "Untagged")
+        {
+            player.soundOfMusic.confused(false);
             player.soundOfMusic.FactorySounds(false);
             GameObject.Find("LuistelevaKusipaa").GetComponent<SkatingEnemyScript>().isActive = false;
             WorldLight.color = new Color(1, 1, 1);

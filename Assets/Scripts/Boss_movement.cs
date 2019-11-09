@@ -10,6 +10,10 @@ public class Boss_movement : MonoBehaviour
     public Boss boss;
     UnityEngine.AI.NavMeshAgent nav;
 
+    public bool isActive = false;
+
+    public audioController bossSounds;
+
 
     void Awake()
     {
@@ -22,17 +26,21 @@ public class Boss_movement : MonoBehaviour
 
     void Update()
     {
-        if (boss.hitpoints > 0)
+        if (isActive)
         {
-            if (playerHP.health > 0)
-                nav.SetDestination(player.position);
-        }
-        else
-        {
-            particle.SetActive(true);
-            particle.transform.position = this.transform.position;
-            nav.enabled = false;
-            Destroy(this.gameObject);
+            if (boss.hitpoints > 0)
+            {
+                if (playerHP.health > 0)
+                    nav.SetDestination(player.position);
+            }
+            else
+            {   
+                bossSounds.Bosautus();
+                particle.SetActive(true);
+                particle.transform.position = this.transform.position;
+                nav.enabled = false;
+                Destroy(this.gameObject);
+            }
         }
     }
 }

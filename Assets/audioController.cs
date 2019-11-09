@@ -8,8 +8,9 @@ public class audioController : MonoBehaviour
     public AudioSource EndSound;
     public AudioSource takeHit;
     public AudioSource FactorySound;
-
-    AudioSource GameMusic;
+    public AudioSource GameMusic;
+    public AudioSource tadaa;
+    public AudioSource BossBreath;
 
     bool doOnce = true;
     int hp = 3;
@@ -19,7 +20,7 @@ public class audioController : MonoBehaviour
     {
         StartSound.volume = 0.1f;
         StartSound.Play();
-        GameMusic = GetComponent<AudioSource>();
+        //GameMusic = GetComponent<AudioSource>();
     }
 
     public void playDeathSound()
@@ -45,13 +46,39 @@ public class audioController : MonoBehaviour
             FactorySound.volume = .6f;
             //AudioSource.PlayClipAtPoint(FactorySound.clip, this.transform.position);
         }
-        else{
+        else
+        {
             FactorySound.volume = 0;
             //FactorySound.Stop();
         }
     }
 
-    public void confused(){
-        GameMusic.pitch *= -1;
+    public void confused(bool yes)
+    {
+        if (yes)
+        {
+            Debug.Log("asdasd");
+            GameMusic.pitch = -1f;
+        }
+        else
+        {
+            GameMusic.pitch = 1f;
+        }
+    }
+
+    public void doTadaa()
+    {
+        tadaa.Play();
+        //AudioSource.PlayClipAtPoint(tadaa.clip, this.transform.position);
+    }
+
+    public void Bosautus()
+    {
+        if(!BossBreath.isPlaying)
+            BossBreath.Play();
+
+            else
+            BossBreath.Stop();
+        //AudioSource.PlayClipAtPoint(BossBreath.clip, this.transform.position);
     }
 }

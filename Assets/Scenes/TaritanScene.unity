@@ -1999,6 +1999,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RealLonk
       objectReference: {fileID: 0}
+    - target: {fileID: 89381225377873108, guid: 3a0c14d08c186a8469cd46e36c1ea858,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 89381225377873111, guid: 3a0c14d08c186a8469cd46e36c1ea858,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2054,21 +2059,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 89381225377873108, guid: 3a0c14d08c186a8469cd46e36c1ea858,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3200562241237453459, guid: 3a0c14d08c186a8469cd46e36c1ea858,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6237200456995306881, guid: 3a0c14d08c186a8469cd46e36c1ea858,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b0791d984857dc241b0113c5736abc46, type: 2}
+    - target: {fileID: 3200562241237453459, guid: 3a0c14d08c186a8469cd46e36c1ea858,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0c14d08c186a8469cd46e36c1ea858, type: 3}
 --- !u!1 &1300951978
@@ -2250,7 +2250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.53800005, y: 0.23900001}
   m_AnchorMax: {x: 0.76867104, y: 0.30874297}
-  m_AnchoredPosition: {x: -2, y: -2}
+  m_AnchoredPosition: {x: -2, y: -1.9999962}
   m_SizeDelta: {x: -9.299988, y: 5.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430919427
@@ -3075,9 +3075,9 @@ RectTransform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.32474685, y: 0.70650476}
-  m_AnchorMax: {x: 1, y: 0.86562854}
-  m_AnchoredPosition: {x: -3, y: -3.850006}
-  m_SizeDelta: {x: 6.0999985, y: 0.3000002}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -3.025, y: 0.04499817}
+  m_SizeDelta: {x: 6.0499, y: 0.08999634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113309858
 MonoBehaviour:
@@ -3099,18 +3099,22 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7cce31ddb965a8349adf912550b845fb, type: 3}
-    m_FontSize: 100
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PELIN NIMI
+  m_Text: 'Trought To Spikes
+
+    And
+
+    Ice With My Old 95'
 --- !u!222 &2113309859
 CanvasRenderer:
   m_ObjectHideFlags: 0
