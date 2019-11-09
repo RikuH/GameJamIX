@@ -5,31 +5,34 @@ using UnityEngine;
 public class Boss_movement : MonoBehaviour
 {
     Transform player;
-    public ParticleSystem particle;
+    public GameObject particle;
     public PlayerMovement playerHP;
     public Boss boss;
     UnityEngine.AI.NavMeshAgent nav;
 
 
-    void Awake ()
+    void Awake()
     {
-        player = GameObject.FindGameObjectWithTag ("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHP = player.GetComponent<PlayerMovement>();
         boss = GetComponent<Boss>();
-        nav = GetComponent <UnityEngine.AI.NavMeshAgent> ();
+        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
 
-    void Update ()
+    void Update()
     {
-       if(boss.hitpoints > 0 && playerHP.health > 0)
-       {
-           nav.SetDestination (player.position);
-       }
-       else
-       {
-           nav.enabled = false;
+        if (boss.hitpoints > 0)
+        {
+            if (playerHP.health > 0)
+                nav.SetDestination(player.position);
+        }
+        else
+        {
+            particle.SetActive(true);
+            particle.transform.position = this.transform.position;
+            nav.enabled = false;
             Destroy(this.gameObject);
-       }
+        }
     }
 }
