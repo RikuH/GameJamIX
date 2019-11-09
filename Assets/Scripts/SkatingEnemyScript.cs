@@ -9,19 +9,32 @@ public class SkatingEnemyScript : MonoBehaviour
     public GameObject[] rndPoints;
     int newRandom;
 
+    private bool doOnce = true;
+    public bool isActive = false;
+
     [SerializeField] private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        RandomizeNextPosition();
+        //RandomizeNextPosition();
         newRandom = rndPoints.Length + 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isActive)
+        {
+            if (doOnce)
+            {
+                Debug.Log("Jaata");
+
+                doOnce = false;
+                RandomizeNextPosition();
+            }
+        }
         this.transform.LookAt(player.transform);
     }
 

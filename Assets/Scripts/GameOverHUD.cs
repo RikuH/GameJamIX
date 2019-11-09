@@ -10,9 +10,13 @@ public class GameOverHUD : MonoBehaviour
     public Button BackToMenuButton;
 
     public GameObject GameOverPanel;
-    void GameOver()
+    void Update()
     {   
-        GameOverPanel.SetActive(true);
+        
+        if(GameObject.Find("RealLonk").GetComponent<PlayerMovement>().health <= 0){
+            GameOverPanel.SetActive(true);
+
+        }
     }
 
     void BackToMenu()
